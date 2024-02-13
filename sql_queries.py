@@ -1,23 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[19]:
-
-
-#!pip install mysql-connector-python
-
-
-# In[20]:
+# In[8]:
 
 
 import mysql.connector
 import os
 import glob
 import pandas as pd
-
-
-# In[21]:
-
 
 DATABASE = 'sparkify'
 conn = None
@@ -33,14 +23,12 @@ def create_database():
                 cur.execute(f"SHOW DATABASES")
                 databases = cur.fetchall()
                 for db in databases:
-                    print(db[0])
-                cur.execute(f"DROP DATABASE IF EXISTS {DATABASE}")
-                # creating a database
-                cur.execute(f"CREATE DATABASE {DATABASE} DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_unicode_ci")
+                    cur.execute(f"DROP DATABASE IF EXISTS {DATABASE}")
+                    # creating a database
+                    cur.execute(f"CREATE DATABASE {DATABASE} DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_unicode_ci")
         # Connect to the newly created database
         conn = mysql.connector.connect(host='localhost', user='root', password='password', database=DATABASE)
         cur = conn.cursor()
-        print("Connection established")
 
         return cur, conn
 
@@ -132,30 +120,12 @@ def main():
     cur, conn = create_database()
     
     drop_tables(cur, conn)
-    print("Tables dropped successfully")
     
     create_tables(cur, conn)
-    print("Tables created successfully")
     
     cur.close()
     conn.close()
     
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
