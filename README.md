@@ -24,10 +24,10 @@ The project structure is organized as follows:
 **Setup and Usage**
 To set up and run the Sparkify ETL project, follow these steps:
 1. Ensure you have Python 3.x installed on your system.
-2. Install required Python dependencies by running: 
+2. Install required Python dependencies by running:   
 	pip install -r requirements.txt
 3. Set up a MySQL database to load the transformed data.
-4. Install the MySQL Connector Python package:
+4. Install the MySQL Connector Python package:  
 	pip install mysql-connector-python
 5. Modify the database connection settings in sql_queries.py if necessary.
 6. Run the sql_queries.py script to create the necessary database tables:
