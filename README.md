@@ -2,8 +2,8 @@
 This project aims to facilitate data analysis for Sparkify, a startup focused on understanding user activity and song preferences on their music streaming app. The analytics team at Sparkify seeks to gain insights into the songs users are listening to. However, they currently lack a streamlined method to query their data, which is stored in JSON logs detailing user activity and metadata on songs within the app.
 
 To address this challenge, the project implements the following solutions:  
-Data Modeling with MySQL: Structuring the data in MySQL tables to enable efficient querying and analysis.  
-ETL Pipeline: Building an Extract, Transform, Load (ETL) pipeline using Python, which transforms data from JSON files into dimension and fact tables following a "star" schema.
+**Data Modeling with MySQL**: Structuring the data in MySQL tables to enable efficient querying and analysis.  
+**ETL Pipeline**: Building an Extract, Transform, Load (ETL) pipeline using Python, which transforms data from JSON files into dimension and fact tables following a "star" schema.
 
 **Overview**
 Sparkify is a music streaming service that generates a vast amount of data on user interactions with songs. It's essential to organize and structure this data efficiently to enable data analysis and insights. The ETL process extracts raw log data, transforms it into a suitable format, and loads it into MySQL tables for easier querying and analysis.
